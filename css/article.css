@@ -1,0 +1,96 @@
+body{
+    background: #FFFFFF;
+}
+
+
+.article{
+    width:100%;
+}
+.read_article {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.article_title,.article_list{
+    width: 100%;
+}
+.article_title{
+    text-align: center;
+}
+.article_title>h4{
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#80CC04;
+    margin-bottom: 0.5rem;
+}
+.article_title>p{
+    font-size: 0.9em;
+    color:#999999;
+    margin: 0;
+}
+.article_list{
+    text-align: left;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+.article_p>p,.article_p>p{
+    font-size: 0.8em;
+    color:#777777;
+    line-height: 1.5rem;
+}
+.article_img>img{
+    width:100%;
+}
+.introduce{
+    margin-top: 2rem;
+}
+.introduce>h5{
+    font-size: 0.9em;
+    color:#777777;
+    font-weight: bold;
+    margin-top: 4rem;
+}
+.introduce>p{
+    font-size: 0.8em;
+    color:#777777;
+    line-height: 1.5rem;
+}
+
+
+
+
+
+
+/************************媒体查询样式****************************/
+@media screen and (max-width: 1170px) {
+
+}
+
+@media screen and (max-width: 1169px) and (min-width: 750px){
+
+}
+
+@media screen and (max-width: 749px){
+    .read_article {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

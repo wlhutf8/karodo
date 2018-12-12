@@ -1,0 +1,159 @@
+body{
+    background: #FAFAFA;
+}
+
+#product_content{
+    width:100%;
+    height:20rem;
+}
+.product_banner{
+    width:100%;
+    height:100%;
+    background: url("../img/message.jpg") no-repeat center center;
+    background-size: cover;
+}
+.product_center_text,.product_text_item{
+    width:100%;
+}
+.product_text_item>.item_text,.product_text_item{
+    width:100%;
+    text-align: center;
+    margin-top: 5rem;
+    /*border:1px solid red;*/
+}
+
+.item_text>h4{
+    font-size: 2em;
+    color:#80CC04;
+}
+.item_text>p{
+    font-size: 1em;
+    color:#C8A999;
+}
+
+
+
+
+/***************服务类型列表样式****************/
+.serve{
+    width:100%;
+}
+.serve_type,.serve_type>ul{
+    width:100%;
+    /*border:1px solid red;*/
+}
+.serve_type>ul{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+.serve_type>ul>li{
+    width:18%;
+    /*border:1px solid #000;*/
+}
+.server_img{
+    width:100%;
+    /*border:1px solid #000;*/
+}
+.server_img_item{
+    width:8rem;
+    height:8rem;
+    margin: 0 auto;
+    /*border:1px solid pink;*/
+}
+.server_img_item>img{
+    width:100%;
+    height:100%;
+}
+.server_text{
+    width:100%;
+    text-align: center;
+    /*border:1px solid #000;*/
+}
+.server_text>h4{
+    font-size: 1.2em;
+    color:#555568;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.server_shu{
+    width:5rem;
+    height:2px;
+    text-align: center;
+    margin: 2rem auto;
+    background:#80CC04;
+    transition: all 0.5s ease;
+}
+.server_text>p{
+    font-size:0.8em;
+    color:#999999;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+/**********鼠标移入效果**********/
+.serve_type>ul>li:hover .server_shu{
+    width:8rem;
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+/*****************媒体查询样式*******************************/
+@media screen and (max-width: 1170px) {
+
+}
+
+@media screen and (max-width: 1169px) and (min-width: 750px){
+    .serve_type>ul>li {
+        margin-top: 3rem;
+        width: 45%;
+        /* border: 1px solid #000; */
+    }
+    .serve_type>ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 749px){
+    .serve_type>ul>li {
+        width: 80%;
+        margin-top: 3rem;
+        /* border: 1px solid #000; */
+    }
+    .serve_type>ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

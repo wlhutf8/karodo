@@ -1,0 +1,88 @@
+#banner{
+    width:100%;
+    height:530px;
+    position:relative;
+    overflow:hidden;
+    margin: 0 auto;
+}
+#banner ul.carrousel{
+    width:100%;
+    height:530px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+#banner ul.carrousel>li>img{
+    width:100%;
+    height:530px;
+}
+
+#banner ul.carrousel>li{
+    width:100%;
+    height:530px;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:all .8s ease-in-out;
+    opacity:0;
+}
+
+#banner ul.carrousel .img_show{
+    opacity:1;
+}
+
+
+#banner .arrow{
+    display:block;
+    width:46px;
+    height:100px;
+    position:absolute;
+    top:215px;
+    z-index:5;
+    border-radius:3px;
+    transition:opacity 0.4s linear;
+    opacity:0.2;
+}
+#banner .arrow:hover{
+    opacity:0.7;
+}
+#banner .lf{
+    left:0;
+    background:#fff url(../img/arrow_lf.png) no-repeat center;
+}
+#banner .rg{
+    right:0;
+    background:#fff url(../img/arrow_rg.png) no-repeat center;
+}
+#banner ul.indicators{
+    width:88px;
+    height:20px;
+    position:absolute;
+    bottom:20px;
+    right:636px;
+    z-index:5;
+    list-style: none;
+}
+#banner ul.indicators>li{
+    width:14px;
+    height:14px;
+    float:left;
+    margin:3px;
+    box-sizing:border-box;
+    border-radius:7px;
+    background:#fff;
+    transition:all 0.2s linear;
+}
+.c_hover{
+    background:#0aa1ed !important;
+    width:22px !important;
+}
+#banner .b_line{
+    display:inline-block;
+    position:absolute;
+    bottom:0;
+    width:0;
+    height:3px;
+    background:#0088e4;
+    z-index:5;
+}

@@ -1,0 +1,165 @@
+body{
+    background: #FAFAFA;
+}
+
+#product_content{
+    width:100%;
+    height:20rem;
+}
+/*.product_banner{*/
+    /*width:100%;*/
+    /*height:100%;*/
+    /*background: url("../img/message.jpg") no-repeat center center;*/
+    /*background-size: cover;*/
+/*}*/
+.product_center_text,.product_text_item{
+    width:100%;
+}
+.product_text_item>.item_text,.product_text_item{
+    width:100%;
+    text-align: center;
+    margin-top: 5rem;
+    /*border:1px solid red;*/
+}
+
+.item_text>h4{
+    font-size: 2em;
+    color:#80CC04;
+}
+.item_text>p{
+    font-size: 1em;
+    color:#C8A999;
+}
+
+
+/******************联系我们详细地址部分的样式******************************/
+.relation{
+    width:100%;
+    margin-top: 4rem;
+}
+.relation_top,.relation_bottom{
+    width:65%;
+    margin: 0 auto;
+}
+.relation_top_text{
+    width:100%;
+    text-align: center;
+}
+.relation_top_text>h4{
+    font-size: 0.9em;
+    color:#555555;
+    line-height: 1.7rem;
+}
+.relation_bottom_list,.relation_bottom_list>ul{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.relation_bottom_list{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.relation_bottom_list>ul>li{
+    width:25%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: all 0.5s;
+}
+
+.relation_bottom_list>ul>li>h3{
+    font-size: 1.2em;
+    color:#555555;
+    transition: all 0.5s;
+}
+.relation_bottom_list>ul>li>p{
+    font-size: 0.9em;
+    color:#80CC04;
+}
+.site{
+    margin: 0 auto;
+    text-align: center;
+}
+.site>p{
+    font-size: 0.9em;
+    color:#777777;
+}
+
+
+/***********鼠标移入效果样式*************/
+.font_h3{
+    background:rgba(225,225,225,0.5);
+    transition: all 0.5s;
+    color:#80CC04;
+}
+
+
+/****************地图部分样式*********************/
+.map{
+    width:100%;
+    height:25rem;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+
+
+/*****************媒体查询样式*******************************/
+@media screen and (max-width: 1170px) {
+
+}
+
+@media screen and (max-width: 1169px) and (min-width: 750px){
+    .relation_bottom_list>ul>li {
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .relation_bottom_list {
+        padding-top: 0rem;
+        padding-bottom: 3rem;
+    }
+    .relation_top, .relation_bottom {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 749px){
+    .relation_bottom_list>ul>li {
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .relation_bottom_list {
+        padding-top: 0rem;
+        padding-bottom: 3rem;
+    }
+    .relation_top, .relation_bottom {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .relation_top, .relation_bottom {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

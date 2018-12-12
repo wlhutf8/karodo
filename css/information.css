@@ -1,0 +1,201 @@
+body{
+    background: #FAFAFA;
+}
+
+#product_content{
+    width:100%;
+    height:20rem;
+}
+.product_banner{
+    width:100%;
+    height:100%;
+    background: url("../img/message.jpg") no-repeat center center;
+    background-size: cover;
+}
+.product_center_text,.product_text_item{
+    width:100%;
+}
+.product_text_item>.item_text,.product_text_item{
+    width:100%;
+    text-align: center;
+    margin-top: 5rem;
+    /*border:1px solid red;*/
+}
+
+.item_text>h4{
+    font-size: 2em;
+    color:#80CC04;
+}
+.item_text>p{
+    font-size: 1em;
+    color:#C8A999;
+}
+
+
+
+
+
+
+/*****************资讯***********************/
+.information{
+    width:100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.information_top{
+    width:70%;
+    border:1px solid #E8E8E8;
+}
+.information_top{
+    display:flex;
+    justify-content: space-around;
+    /*flex-wrap: wrap;*/
+    margin: 1rem auto;
+}
+.information_top_left{
+    width:70%;
+    /*border:1px solid red;*/
+}
+.information_top_right{
+    width:30%;
+    /*border:1px solid red;*/
+}
+.information_img{
+    width:100%;
+    overflow: hidden;
+}
+.information_img>img{
+   width:100%;
+    transition: all 0.5s ease;
+}
+
+/*************鼠标移入效果设置***************/
+.information_top:hover .information_img>img {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+
+.information_top:hover .information_text>h5{
+    color:#80CC04;
+    transition: all 0.5s ease;
+}
+
+
+/**********产品展示跳转样式*********************/
+.information_text{
+    margin: 4rem 4rem;
+}
+.information_text>h5{
+    font-size: 1.2em;
+    color:#333333;
+}
+.information_text>p{
+    font-size: 1em;
+    color:#999999;
+}
+
+
+/**********按钮部分的样式***************/
+.information_btn{
+    width:100%;
+    margin-left: 4rem;
+}
+.information_btn>button{
+    width:9rem;
+    height:3rem;
+    background: #FAFAFA;
+    color:#999999;
+    font-size: 1em;
+    border:1px solid #E8E8E8;
+    transition: all 0.5s ease;
+}
+/***********鼠标移入效果**************/
+.information_top:hover .information_btn>button{
+    background-color:#80CC04 ;
+    color:#FFFFFF;
+    transition: all 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*****************媒体查询样式*******************************/
+@media screen and (max-width: 1170px) {
+
+}
+
+@media screen and (max-width: 1169px) and (min-width: 750px){
+    .information_top{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 4rem auto;
+    }
+    .information_top {
+        width: 80%;
+        border: 1px solid #E8E8E8;
+    }
+    .information_top_right {
+        width: 100%;
+        margin-top: 1rem;
+        /* border: 1px solid red; */
+    }
+    .information_text {
+        margin: 2rem 2rem;
+    }
+}
+
+@media screen and (max-width: 749px){
+    .information {
+        width: 100%;
+        margin-top: 0rem;
+    }
+    .information_top{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 4rem auto;
+    }
+    .information_top {
+        width: 80%;
+        border: 1px solid #E8E8E8;
+    }
+
+    .information_top_right {
+        width: 100%;
+        margin-top: 1rem;
+        /* border: 1px solid red; */
+    }
+    .information_text {
+        margin: 2rem 0rem;
+    }
+    .product_text_item>.item_text, .product_text_item {
+        margin-top: 3rem;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

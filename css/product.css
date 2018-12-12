@@ -1,0 +1,253 @@
+body{
+    background: #FAFAFA;
+}
+
+#product_content{
+    width:100%;
+    height:20rem;
+}
+.product_banner{
+    width:100%;
+    height:100%;
+    background: url("../img/message.jpg") no-repeat center center;
+    background-size: cover;
+}
+.product_center_text,.product_text_item{
+    width:100%;
+}
+.product_text_item>.item_text,.product_text_item>.product_text_nav{
+    width:100%;
+    text-align: center;
+    margin-top: 5rem;
+    /*border:1px solid red;*/
+}
+.product_text_nav>ul{
+    width:30%;
+    display:flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    /*border:1px solid #000;*/
+}
+.item_text>h4{
+    font-size: 2em;
+    color:#80CC04;
+}
+.item_text>p{
+    font-size: 1em;
+    color:#C8A999;
+}
+.product_text_nav>ul>li{
+    width:25%;
+    /*border:1px solid #000;*/
+}
+.product_text_nav>ul>li>a{
+    text-decoration: none;
+    font-size: 1em;
+    color:#777777;
+    font-weight: bold;
+}
+.product_text_nav>ul>li:first-child>a:first-child{
+    color:#80CC04;
+}
+.product_text_nav>ul>li>a:hover{
+    color:#80CC04;
+    transition: all 0.5s;
+}
+
+
+/*******************产品展示中心部分样式**************************/
+.product{
+    width:100%;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+.product_ul{
+    width:80%;
+    margin: 0 auto;
+    /*position: relative;*/
+}
+.product_ul>ul{
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /*border:1px solid red;*/
+}
+.product_ul>ul>li{
+    width:30%;
+    margin-left: 3rem;
+    transition: all 0.5s ease;
+    /*border:1px solid #000000;*/
+}
+.product_ul_img{
+    width:100%;
+    overflow: hidden;
+}
+.product_ul_img>img{
+    width:100%;
+    transition: all 0.5s ease;
+}
+.product_ul_text{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    /*flex-wrap: wrap;*/
+    transition: all 0.5s ease;
+}
+.text_left{
+    width:70%;
+    line-height: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    /*border:1px solid deeppink;*/
+}
+.text_left>h5{
+    color:#777777;
+    font-size: 0.9em;
+    transition: all 0.5s ease;
+}
+.text_left>p{
+    color:#777777;
+    font-size: 0.6em;
+    padding: 0;
+    margin: 0;
+}
+.text_right{
+    width:20%;
+    text-align: center;
+    /*border:1px solid deeppink;*/
+}
+.text_right>span{
+    font-size: 1rem;
+    font-weight: bold;
+    color:#CCCCCC;
+    display: block;
+    margin-top: 32%;
+    transition: all 0.5s ease;
+}
+
+
+/*********鼠标移入显示效果部分*************/
+.product_li:hover .product_ul_img>img{
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+.product_li:hover{
+    box-shadow: darkgrey 1px 3px 20px 2px;
+    transition: all 0.5s ease;
+    transform: translateY(-0.5rem);
+}
+.product_li:hover .text_left>h5{
+    color:#80CC04;
+    transition: all 0.5s ease;
+}
+.product_li:hover .text_right>span{
+    color:#80CC04;
+    transition: all 0.5s ease;
+}
+
+
+/***********产品列表展示重叠样式******************/
+
+.product_ul>ul.product_ul_list{
+    display: none;
+}
+.product_ul>ul.product_ul_list:nth-child(1) {
+    display: flex;
+}
+
+
+
+
+
+
+
+/*****************媒体查询样式*******************************/
+@media screen and (max-width: 1170px) {
+
+}
+
+@media screen and (max-width: 1169px) and (min-width: 750px){
+    .product_text_nav>ul {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 auto;
+        /* border: 1px solid #000; */
+    }
+    .product_ul {
+        width: 90%;
+        /*margin: 0 auto;*/
+        /*position: relative;*/
+    }
+    .product_ul>ul>li {
+        width: 45%;
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 749px){
+    .product_text_nav>ul {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 auto;
+        /* border: 1px solid #000; */
+    }
+    .product {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+    .product_ul>ul>li {
+        width: 100%;
+         margin-left: 0rem;
+        margin-top: 2rem;
+        /* border: 1px solid #000000; */
+    }
+    .product_text_item>.product_text_nav {
+        /*width: 100%;*/
+        /*text-align: center;*/
+        margin-top: 3rem;
+    }
+    .text_right>span {
+        margin-top: 50%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
