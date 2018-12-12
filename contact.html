@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Et9ggIiRldSNEZnCDFZHCuBvlfaKGKqm"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--手机端设备适配-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>联系我们</title>
+    <link rel="icon" href="img/ka.ico">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/base.js"></script>
+
+
+</head>
+<body>
+    <!--头部分位置-->
+    <div id="header"></div>
+
+    <!--应用高德地图显示部分-->
+    <div id="allmap" class="map"></div>
+
+    <div class="product_center_text">
+        <div class="product_text_item">
+            <div class="item_text">
+                <h4>COMP服务支持</h4>
+                <p>PRODUCT</p>
+            </div>
+        </div>
+    </div>
+
+    <!--联系我们地址详情-->
+    <div class="relation">
+        <div class="relation_top">
+           <div class="relation_top_text">
+               <h4>
+                   2018年11月正式发布2年多的时间里，亚马逊Echo智能音箱已经成为市场上最火热的智能家居产品之一，
+                   人们通过Echo可以用语音控制家电、购买商品、查询咨询。根据研究机构eMarketer的调查数据显示，
+                   在美国，大约有3600万用户每月会用到一次语音操控的音箱，并且这个数字还在扩大。
+               </h4>
+           </div>
+        </div>
+        <div class="relation_bottom">
+            <div class="relation_bottom_list">
+                <ul>
+                    <li>
+                        <h3>网站建设文化传播有限公司</h3>
+                        <p>Beijing WEBSITE Culture Communication Co. Ltd.</p>
+                        <div class="site">
+                            <p>地址：上海市嘉定</p>
+                            <p>地址：上海市嘉定区康丰路28</p>
+                            <p>地址：上海市嘉定区</p>
+                            <p>地址：上海市嘉定区康丰路288号</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <h3>网站建设文化传播有限公司</h3>
+                        <p>Beijing WEBSITE Culture Communication Co. Ltd.</p>
+                        <div class="site">
+                            <p>地址：上海市嘉定</p>
+                            <p>地址：上海市嘉定区康丰路28</p>
+                            <p>地址：上海市嘉定区</p>
+                            <p>地址：上海市嘉定区康丰路288号</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <h3>网站建设文化传播有限公司</h3>
+                        <p>Beijing WEBSITE Culture Communication Co. Ltd.</p>
+                        <div class="site">
+                            <p>地址：上海市嘉定</p>
+                            <p>地址：上海市嘉定区康丰路28</p>
+                            <p>地址：上海市嘉定区</p>
+                            <p>地址：上海市嘉定区康丰路288号</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--底部位置-->
+    <div id="footer"></div>
+</body>
+
+<script>
+   // 百度地图API功能
+    let map = new BMap.Map("allmap");
+    map.centerAndZoom("顺德",12);
+    map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+</script>
+</html>
