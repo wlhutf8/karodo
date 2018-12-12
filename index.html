@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--手机端设备适配-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KARODO</title>
+    <link rel="icon" href="img/ka.ico">
+    <link rel="stylesheet" href="css/header.css">
+    <!--<link rel="stylesheet" href="css/banner.css">-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/base.css">
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/index.js"></script>
+
+
+    <style>
+        #banner{
+            width:100%;
+            height:40rem;
+            overflow:hidden;
+            margin: 0 auto;
+            position:relative;
+        }
+        #banner ul.carrousel{
+            width:100%;
+            height:100%;
+        }
+        #banner ul.carrousel>li{
+            width:100%;
+            height:100%;
+            transition:all 0.8s ease-in-out;
+            opacity:0;
+        }
+        .banner_li{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        .img_bg_one{
+            background: url("img/banner.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        .img_bg_two{
+            background: url("img/banner2.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        .img_bg_three{
+            background: url("img/banner.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        .img_bg_font{
+            background: url("img/banner2.jpg") no-repeat center center;
+            background-size: cover;
+        }
+
+        #banner ul.carrousel .img_show{
+            opacity:1;
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+
+
+
+        #banner .arrow{
+            display:block;
+            width:46px;
+            height:100px;
+            position:absolute;
+            top:40%;
+            z-index:2;
+            border-radius:3px;
+            transition:opacity 0.4s linear;
+            opacity:0.2;
+        }
+        #banner .arrow:hover{
+            opacity:0.7;
+        }
+        #banner .lf{
+            left:0;
+            background:#fff url(img/arrow_lf.png) no-repeat center;
+        }
+        #banner .rg{
+            right:0;
+            background:#fff url(img/arrow_rg.png) no-repeat center;
+        }
+        #banner ul.indicators{
+            width:88px;
+            height:20px;
+            position:absolute;
+            /*bottom:20%;*/
+            top:95%;
+            right:48%;
+            z-index:2;
+            list-style: none;
+        }
+        #banner ul.indicators>li{
+            width:14px;
+            height:14px;
+            float:left;
+            margin:3px;
+            box-sizing:border-box;
+            border-radius:7px;
+            background:#fff;
+            transition:all 0.2s linear;
+        }
+        .c_hover{
+            background:#0aa1ed !important;
+            width:22px !important;
+        }
+        .banner_text{
+            position: absolute;
+            top:30%;
+            left:15%;
+            z-index: 2;
+            /*border:1px solid red;*/
+        }
+        .banner_shu{
+            width:5rem;
+            height:2px;
+            background: #D3A7AB;
+        }
+        .banner_text>p{
+            color:#D3A7AB;
+            padding: 0;
+            margin: 0;
+        }
+        .banner_text>p{
+            margin-top: 1rem;
+        }
+        .big_title{
+            font-size: 2em;
+        }
+        .banner_small{
+            font-size: 1.5em;
+        }
+        .banner_big{
+            font-size: 1em;
+        }
+        /*#banner .b_line{*/
+            /*!*width:1903px;*!*/
+            /*display:inline-block;*/
+            /*position:absolute;*/
+            /*!*bottom:0;*!*/
+            /*width:0;*/
+            /*height:3px;*/
+            /*background:#0088e4;*/
+            /*z-index:5;*/
+        /*}*/
+
+        /**********媒体查询样式******************/
+        @media screen and (max-width: 1170px) {
+
+        }
+
+        @media screen and (max-width: 1169px) and (min-width: 751px){
+            #banner ul.indicators {
+                /*width: 88px;*/
+                /*height: 20px;*/
+                /*position: absolute;*/
+                /*bottom: 20%;*/
+                /*top: 95%;*/
+                right: 45%;
+                /*z-index: 2;*/
+                /*list-style: none;*/
+            }
+        }
+
+        @media screen and (max-width: 750px) and (min-width: 441px){
+            #banner ul.indicators {
+                /*width: 88px;*/
+                /*height: 20px;*/
+                /*position: absolute;*/
+                /*bottom: 20%;*/
+                /*top: 95%;*/
+                right: 42%;
+                /*z-index: 2;*/
+                /*list-style: none;*/
+            }
+        }
+
+        @media screen and (max-width: 440px) and (min-width: 381px){
+            #banner ul.indicators {
+                /*width: 88px;*/
+                /*height: 20px;*/
+                /*position: absolute;*/
+                /*bottom: 20%;*/
+                /*top: 95%;*/
+                right: 40%;
+                /*z-index: 2;*/
+                /*list-style: none;*/
+            }
+        }
+
+        @media screen and (max-width: 380px){
+            #banner ul.indicators {
+                /*width: 88px;*/
+                /*height: 20px;*/
+                /*position: absolute;*/
+                /*bottom: 20%;*/
+                /*top: 95%;*/
+                right: 34%;
+                /*z-index: 2;*/
+                /*list-style: none;*/
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <!--header部分-->
+    <div id="header"></div>
+
+    <!--banner部分-->
+    <div id="banner">
+        <ul class="carrousel" id="carrousel">
+            <li class="img_show img_bg_one">
+                <!--<img src="img/banner.jpg" data-src="" alt="">-->
+            </li>
+            <li class="banner_li img_bg_two">
+                <!--<img src="img/banner2.jpg" data-src="" alt="">-->
+            </li>
+            <li class="banner_li img_bg_three">
+                <!--<img src="img/banner.jpg" data-src="" alt="">-->
+            </li>
+            <li class="banner_li img_bg_font">
+                <!--<img src="img/banner2.jpg" data-src="" alt="">-->
+            </li>
+
+            <div class="banner_text">
+               <p class="banner_shu"></p>
+                <p class="banner_small">FEELING LIFE</p>
+                <p class="big_title">灵巧便捷  精致生活</p>
+                <p class="banner_big">FEELING LIFE BRINGS THE EXTREME ARTILERY</p>
+            </div>
+        </ul>
+
+
+        <a href="#" data-move="left" class="arrow lf"></a>
+        <a href="#" data-move="right" class="arrow rg"></a>
+        <ul class="indicators" id="indicators">
+            <li class="c_hover"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!--<span class="b_line" id="b_line"></span>-->
+    </div>
+
+
+    <!--首页的主题部分-->
+    <div id="content">
+        <!--产品中心-->
+        <div class="title">
+            <span>产品中心</span>
+            <p>PROOUCT</p>
+        </div>
+        <!--产品中心部分-->
+        <div class="product">
+            <ul>
+                <li onclick="javascript:location.href='product.html'">
+                    <div class="product_img">
+                        <img src="img/product.jpg" alt="">
+                    </div>
+                    <div class="message">
+                        <div class="message_text">
+                            <p class="p_one">KY-006红</p>
+                            <p class="p_two">额定功率:800W  额定容量:1.8L</p>
+                        </div>
+                        <div class="message_img">
+                            <span>--></span>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li onclick="javascript:location.href='product.html'">
+                    <div class="product_img">
+                        <img src="img/product.jpg" alt="">
+                    </div>
+                    <div class="message">
+                        <div class="message_text">
+                            <p class="p_one">KY-006红</p>
+                            <p class="p_two">额定功率:800W  额定容量:1.8L</p>
+                        </div>
+                        <div class="message_img">
+                            <span>--></span>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li onclick="javascript:location.href='product.html'">
+                    <div class="product_img">
+                        <img src="img/product.jpg" alt="">
+                    </div>
+                    <div class="message">
+                        <div class="message_text">
+                            <p class="p_one">KY-006红</p>
+                            <p class="p_two">额定功率:800W  额定容量:1.8L</p>
+                        </div>
+                        <div class="message_img">
+                            <span>--></span>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li onclick="javascript:location.href='product.html'">
+                    <div class="product_img">
+                        <img src="img/product.jpg" alt="">
+                    </div>
+                    <div class="message">
+                        <div class="message_text">
+                            <p class="p_one">KY-006红</p>
+                            <p class="p_two">额定功率:800W  额定容量:1.8L</p>
+                        </div>
+                        <div class="message_img">
+                            <span>--></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <!--READ MORE-->
+        <div class="read_more">
+            <div class="btn">
+                <button onclick="javascript:location.href='product.html'">READ MORE</button>
+            </div>
+
+            <div class="showing">
+                <div class="img_left">
+                   <div class="img_left_con">
+                       <h2 id="ht_h2">HT-38XN009</h2>
+                       <p>健康玻璃 养生壶</p>
+                       <ul class="con_ul">
+                           <li>12大功能，一壶多用</li>
+                           <li>12大功能，一壶多用</li>
+                           <li>12大功能，一壶多用</li>
+                           <li>12大功能，一壶多用</li>
+                           <li>12大功能，一壶多用</li>
+                           <li>12大功能，一壶多用</li>
+                           <li>12大功能，一壶多用</li>
+                           <li>12大功能，一壶多用</li>
+                       </ul>
+                   </div>
+                    <div class="bg_img">
+                        <img src="img/read2.jpg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="img_right">
+                    <div class="img_top">
+                        <div class="img_top_left">
+                            <div class="shu_top"></div>
+                            <div class="all_list all_list_top">
+                                <h5 id="ht_h5">HT-38XN009</h5>
+                                <p>健康玻璃 养生壶</p>
+                                <ul class="all_list_ul">
+                                    <li>健康玻璃 养生壶</li>
+                                    <li>健康玻璃 养生壶</li>
+                                    <li>健康玻璃 养生壶</li>
+                                    <li>健康玻璃 养生壶</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img_top_right">
+                            <img src="img/product.jpg" alt="" class="gray">
+                        </div>
+                    </div>
+
+
+                    <div class="img_top">
+                        <div class="img_top_right">
+                            <img src="img/product.jpg" alt="" class="gray">
+                        </div>
+                        <div class="img_top_left">
+                            <div class="shu_bottom"></div>
+                            <div class="all_list all_list_bottom">
+                                <h5 id="ht_h52">HT-38XN009</h5>
+                                <p>健康玻璃 养生壶</p>
+                                <ul class="all_list_ul">
+                                    <li>健康玻璃 养生壶</li>
+                                    <li>健康玻璃 养生壶</li>
+                                    <li>健康玻璃 养生壶</li>
+                                    <li>健康玻璃 养生壶</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--资讯部分-->
+        <div class="security">
+            <!--资讯抬头-->
+            <div class="title title_two">
+                <span>资讯</span>
+                <p>NEWS CONTER</p>
+            </div>
+           <div class="security_ul">
+               <ul>
+                   <li onclick="javascript:location.href='information.html'">
+                       <div class="security_top">
+                          <div class="security_top_img">
+                              <img src="img/news_center.jpg" alt="" class="blur">
+                              <p class="img_p">优雅生活</p>
+                          </div>
+                       </div>
+                       <div class="security_bottom">
+                           <p>
+                               蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛苹果控
+                               蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛
+                           </p>
+                           <p class="security_shu"></p>
+                           <p>2018-09-10</p>
+                       </div>
+                   </li>
+
+
+                   <li onclick="javascript:location.href='information.html'">
+                       <div class="security_top">
+                           <div class="security_top_img">
+                               <img src="img/news_center.jpg" alt="">
+                               <p>优雅生活</p>
+                           </div>
+                       </div>
+                       <div class="security_bottom">
+                           <p>
+                               蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛苹果控
+                               蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛
+                           </p>
+                           <p class="security_shu"></p>
+                           <p>2018-09-10</p>
+                       </div>
+                   </li>
+
+
+                   <li onclick="javascript:location.href='information.html'">
+                       <div class="security_top">
+                           <div class="security_top_img">
+                               <img src="img/news_center.jpg" alt="">
+                               <p>优雅生活</p>
+                           </div>
+                       </div>
+                       <div class="security_bottom">
+                           <p>
+                               蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛苹果控
+                               蛋蛋喷是就大佛苹果控蛋蛋喷是就大佛
+                           </p>
+                           <p class="security_shu"></p>
+                           <p>2018-09-10</p>
+                       </div>
+                   </li>
+               </ul>
+           </div>
+        </div>
+
+
+        <!--关于快乐多部分-->
+        <div class="about_happly">
+            <div class="btn">
+                <button onclick="javascript:location.href='about.html'">READ MORE</button>
+            </div>
+
+            <div class="about_bottom">
+                <div class="about_left">
+                    <div class="about_img">
+                        <img src="img/about.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="about_right">
+                    <div class="about_right_all">
+                        <div class="about_title">
+                            <h3>关于快乐多</h3>
+                            <p>ABOUTKARODO</p>
+                        </div>
+                        <div class="about_text">
+                            <p>
+                                关于快乐多关于快乐多关于快乐多关于快乐多关于快乐多关于快乐多
+                                关于快乐多关于快乐多关于快乐多关于快乐多关于快乐多关于快乐多
+                                关于快乐多关于快乐多关于快乐多关于快乐多关于快乐多关于快乐多
+                            </p>
+                        </div>
+                        <div class="about_btn" onclick="javascript:location.href='about.html'">
+                            <button>READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--服务支持部分-->
+        <div class="serve">
+            <div class="title title_two">
+                <span>服务支持</span>
+                <p>OUR SERVICE</p>
+            </div>
+
+            <div class="serve_list">
+                <ul>
+                    <li onclick="javascript:location.href='serve.html'">
+                        <div class="serve_text">
+                            <div class="serve_text_char serve_font_top">
+                                <h4>服务预约</h4>
+                                <p class="serve_shu"></p>
+                                <p class="serve_p">服务预约服务预约服务预约服务预约服务预约服务预约</p>
+                            </div>
+                        </div>
+                        <div class="serve_img serve_img_under">
+                            <img src="img/icon.png" alt="">
+                        </div>
+                    </li>
+
+
+                    <li onclick="javascript:location.href='serve.html'">
+                        <div class="serve_img serve_img_flot">
+                            <img src="img/icon.png" alt="">
+                        </div>
+                        <div class="serve_text serve_text2">
+                            <div class="serve_text_char serve_font_bottom">
+                                <h4>服务预约</h4>
+                                <p class="serve_shu"></p>
+                                <p class="serve_p">服务预约服务预约服务预约服务预约服务预约服务预约</p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li onclick="javascript:location.href='serve.html'">
+                        <div class="serve_text">
+                            <div class="serve_text_char serve_font_top">
+                                <h4>服务预约</h4>
+                                <p class="serve_shu"></p>
+                                <p class="serve_p">服务预约服务预约服务预约服务预约服务预约服务预约</p>
+                            </div>
+                        </div>
+                        <div class="serve_img serve_img_under">
+                            <img src="img/icon.png" alt="">
+                        </div>
+                    </li>
+
+
+                    <li onclick="javascript:location.href='serve.html'">
+                        <div class="serve_img serve_img_flot">
+                            <img src="img/icon.png" alt="">
+                        </div>
+                        <div class="serve_text serve_text2">
+                            <div class="serve_text_char serve_font_bottom">
+                                <h4>服务预约</h4>
+                                <p class="serve_shu"></p>
+                                <p class="serve_p">服务预约服务预约服务预约服务预约服务预约服务预约</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--更多服务部分-->
+        <div class="more">
+            <div class="title title_three">
+                <span>为你提供更多服务，尽在KAROKAROODO</span>
+                <p>OUR SERVICE</p>
+            </div>
+
+            <div class="more_list">
+                <ul>
+                    <li>
+                        <div class="more_item">
+                            <div class="more_img">
+                                <img src="img/ka.ico" alt="">
+                            </div>
+                            <p>优惠活动</p>
+                            <p>点击分享更多优惠</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="more_item">
+                            <div class="more_img">
+                                <img src="img/ka.ico" alt="">
+                            </div>
+                            <p>优惠活动</p>
+                            <p>点击分享更多优惠</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="more_item">
+                            <div class="more_img">
+                                <img src="img/ka.ico" alt="">
+                            </div>
+                            <p>优惠活动</p>
+                            <p>点击分享更多优惠</p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="more_item">
+                            <div class="more_img">
+                                <img src="img/ka.ico" alt="">
+                            </div>
+                            <p>优惠活动</p>
+                            <p>点击分享更多优惠</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--提交信息部分-->
+        <div class="submit">
+            <div class="submit_text">
+                <div class="submit_text_item">
+                    <h5>ENWFOPIWEUGOPERKP</h5>
+                    <p>dsf:sbfdshfdshfiosdhodsf:sbfdshfdshfiosdho</p>
+                    <p>dsf:sbfdshfdshfiosdhodsf:sbfdshfdshfiosdho</p>
+                    <p>dsf:sbfdshfdshfiosdhodsf:sbfdshfdshfiosdho</p>
+                    <p>dsf:sbfdshfdshfiosdhodsf:sbfdshfdshfiosdho</p>
+                    <p>dsf:sbfdshfdshfiosdhodsf:sbfdshfdshfiosdho</p>
+                    <p>dsf:sbfdshfdshfiosdhodsf:sbfdshfdshfiosdho</p>
+                </div>
+            </div>
+
+            <form method="get" action="#" class="submit_input">
+                <div class="input_list">
+                    <input id="username" name="name" type="text" placeholder="姓名" class="required">
+                </div>
+
+                <div class="input_list">
+                    <input id="email" name="email" type="text" placeholder="Email" class="required">
+                </div>
+
+                <div class="input_list">
+                    <input id="phone" name="phone" type="text" placeholder="电话" class="required">
+                </div>
+
+                <div class="text_list">
+                    <textarea name="content" rows="10" cols="30" maxlength="200" placeholder="内容"></textarea>
+                </div>
+
+                <div class="submit_btn">
+                    <button type="submit" id="btn">提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--footer部分-->
+    <div id="footer"></div>
+</body>
+
+<script>
+    /*************轮播图********************/
+    let $carrousel=$("#carrousel");
+    let $ids=$("#indicators");
+    let $b_line=$("#b_line");
+    let i=0,timer=null;
+    function show(i){		//图片轮播 指示圆点样式切换
+        $carrousel.children("li:eq("+i+")").addClass("img_show").siblings().removeClass("img_show");
+        $ids.children(":eq("+i+")").addClass("c_hover").siblings().removeClass("c_hover");
+        // $b_line.css("width",0).stop().animate({width:1903},800);
+    }
+    function carousel(){
+        i += 1;
+        if(i > 3) i= 0;
+        show(i);
+    }
+    timer=setInterval(carousel,3000);
+    //鼠标进入#banner时，停止图片轮播
+    $("#banner").hover(
+        ()=>{
+            clearInterval(timer);
+            timer=null;				//释放定时器
+        },
+        ()=> timer=setInterval(carousel,3000)
+    )
+    //给左右箭头绑定单击事件
+    $("[data-move=left]").click(()=>{
+        i = i > 0 ? i - 1 : 3;
+        show(i);
+    })
+    $("[data-move=right]").click(()=>{
+        i = i < 3 ? i + 1 : 0;
+        show(i);
+    })
+    //给指示圆点绑定鼠标移入动画
+    $ids.on("mouseover","li",function(){
+        let $li=$(this);
+        //var l_index=;		//找出触发事件的li位于父元素中的位置（下标）
+        show($li.index());
+    })
+</script>
+</html>
