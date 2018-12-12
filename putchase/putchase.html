@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品详情页</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="css/responsiveslides.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/responsiveslides.min.js"></script>
+
+<script type="text/javascript">
+// You can also use "$(window).load(function() {"
+$(function () {
+
+  $("#slider3").responsiveSlides({
+	manualControls: '#slider3-pager',
+	// maxwidth: 540
+  });
+});
+</script>
+
+</head>
+<body>
+<div>
+	<div class="purchase">
+		<!--title部分-->
+		<div class="purchase_top">
+			<div class="purchase_top_text">
+				<span>您的位置:</span>
+				<span onclick="javascript:location.href='../index.html'">首页></span>
+				<span onclick="javascript:location.href='../product.html'">产品中心></span>
+				<span onclick="javascript:location.href='../product.html'">家用音响></span>
+				<span onclick="javascript:location.href='../product.html'">G081-S声控环绕车载音响</span>
+			</div>
+		</div>
+
+		<!--wrapper部分-->
+		<div id="wrapper">
+			<!-- Slideshow 3 -->
+			<ul class="rslides" id="slider3">
+				<li class="li_one">
+					<!--<img src="images/product.jpg" alt="">-->
+				</li>
+				<li class="li_two">
+					<!--<img src="images/read1.jpg" alt="">-->
+				</li>
+				<li class="li_three">
+					<!--<img src="images/product.jpg" alt="">-->
+				</li>
+			</ul>
+
+			<!-- Slideshow 3 Pager -->
+			<div class="purchase_ul">
+				<ul id="slider3-pager" class="rslides_tabs">
+					<li class="slider_one">
+						<a href="#"><img src="images/list_one.jpg" alt=""></a>
+					</li>
+					<li class="slider_two">
+						<a href="#"><img src="images/list_two.jpg" alt=""></a>
+					</li>
+					<li class="slider_three">
+						<a href="#"><img src="images/list_one.jpg" alt=""></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--文字介绍部分-->
+		<div class="purchase_bottom">
+			<div class="purchase_text_top">
+				<div class="title_text">
+					<p class="big_title">G081-S声控环绕式车载音响</p>
+					<p class="small_title">家用音响</p>
+					<p class="small_text">
+						一位国内智能音箱从业者向透了个底：而国内智能音箱目前的产量和销量还在千、
+						万之间浮动，卖得最好的还是京东的叮咚，但实际数量仍远远小于Echo。数量最
+						多的还是很多小厂商生产
+					</p>
+				</div>
+				<div class="title_button">
+					<button>立刻购买</button>
+				</div>
+			</div>
+			<div class="purchase_text_bottom">
+				<p>一位国内智能音箱从业者向透了个底：“而国内智能音箱目前的产量和销量还在千、
+					万之间浮动，卖得最好的还是京东的叮咚，但实际数量仍远远小于Echo。数量最
+					多的还是很多小厂商生产的低劣的智能音箱产品，
+					那种产品10句话中有2句话有反应就不错了。”
+				</p>
+				<p>2014年11月正式发布2年多的时间里，亚马逊Echo智能音箱已经成为市场上最火热的智能
+					家居产品之一，人们通过Echo可以用语音控制家电、购买商品、查询咨询。根据研究机
+					构eMarketer的调查数据显示，在美国，大约有3600万用户每月会用到一次语音操控的
+					音箱，并且这个数字还在扩大。
+				</p>
+				<p>
+					产品需要不停迭代完善，以确保稳定的网络连接；比如一款精美的音箱需要反复磨合外观设计；
+					又比如语音交互需要良好的收声效果，而扬声器本身会发声，在远场唤醒智能音箱时，
+					就需要消除扬声器本身的声音；甚至音量大时的震动也会影响收声，所以音腔和麦克风
+					之间的距离都需要考量。智能音箱市场所存在的“分裂发展”问题：看起来简单的智能
+					音箱想要真正实现日常语音交互，实际上全是技术难题。也正是这些难题让中国智能语
+					音市场发展迟缓，而其中影响最大的就是机器对于中文的理解，也就是我们俗称的NLP。
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
